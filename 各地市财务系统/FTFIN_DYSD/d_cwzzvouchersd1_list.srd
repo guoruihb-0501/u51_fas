@@ -1,0 +1,154 @@
+$PBExportHeader$d_cwzzvouchersd1_list.srd
+release 9;
+datawindow(units=0 timer_interval=0 color=1073741824 processing=1 HTMLDW=no print.printername="" print.documentname="" print.orientation = 0 print.margin.left = 110 print.margin.right = 110 print.margin.top = 96 print.margin.bottom = 96 print.paper.source = 0 print.paper.size = 0 print.canusedefaultprinter=yes print.prompt=no print.buttons=no print.preview.buttons=no print.cliptext=no print.overrideprintjob=no print.collate=yes hidegrayline=no grid.lines=0 )
+header(height=80 color="536870912" )
+summary(height=92 color="536870912" )
+footer(height=0 color="536870912" )
+detail(height=84 color="536870912" )
+table(column=(type=decimal(0) updatewhereclause=yes name=seq dbname="cwzzvoucheritem.seq" )
+ column=(type=decimal(0) updatewhereclause=yes name=vouchernum dbname="cwzzvoucheritem.vouchernum" )
+ column=(type=char(20) updatewhereclause=yes name=accountcode dbname="cwzzvoucheritem.accountcode" )
+ column=(type=char(200) updatewhereclause=yes name=zy dbname="cwzzvoucheritem.zy" )
+ column=(type=char(1) updatewhereclause=yes name=dcflag dbname="cwzzvoucheritem.dcflag" values="借方	D/贷方	C/" )
+ column=(type=decimal(4) updatewhereclause=yes name=debitvalue dbname="cwzzvoucheritem.debitvalue" )
+ column=(type=decimal(4) updatewhereclause=yes name=creditvalue dbname="cwzzvoucheritem.creditvalue" )
+ column=(type=decimal(4) updatewhereclause=yes name=debitvaluefcy dbname="cwzzvoucheritem.debitvaluefcy" )
+ column=(type=decimal(4) updatewhereclause=yes name=creditvaluefcy dbname="cwzzvoucheritem.creditvaluefcy" )
+ column=(type=char(10) updatewhereclause=yes name=ccycode dbname="cwzzvoucheritem.ccycode" )
+ column=(type=decimal(6) updatewhereclause=yes name=excrate dbname="cwzzvoucheritem.excrate" )
+ column=(type=char(20) updatewhereclause=yes name=dept dbname="cwzzvoucheritem.dept" )
+ column=(type=char(20) updatewhereclause=yes name=subdept dbname="cwzzvoucheritem.subdept" )
+ column=(type=char(20) updatewhereclause=yes name=area dbname="cwzzvoucheritem.area" )
+ column=(type=char(20) updatewhereclause=yes name=venderid dbname="cwzzvoucheritem.venderid" )
+ column=(type=char(20) updatewhereclause=yes name=category dbname="cwzzvoucheritem.category" )
+ column=(type=char(20) updatewhereclause=yes name=chargetype dbname="cwzzvoucheritem.chargetype" )
+ column=(type=char(20) updatewhereclause=yes name=person dbname="cwzzvoucheritem.person" )
+ column=(type=char(20) updatewhereclause=yes name=tax dbname="cwzzvoucheritem.tax" )
+ column=(type=char(30) updatewhereclause=yes name=xjll dbname="cwzzvoucheritem.xjll" )
+ column=(type=char(20) updatewhereclause=yes name=poptype dbname="cwzzvoucheritem.poptype" )
+ column=(type=char(40) updatewhereclause=yes name=account dbname="cwzzvoucheritem.account" )
+ column=(type=char(20) updatewhereclause=yes name=fwsr dbname="cwzzvoucheritem.fwsr" )
+ column=(type=char(20) updatewhereclause=yes name=jyk dbname="cwzzvoucheritem.jyk" )
+ column=(type=char(20) updatewhereclause=yes name=wmid dbname="cwzzvoucheritem.wmid" )
+ column=(type=char(20) updatewhereclause=yes name=saletax dbname="cwzzvoucheritem.saletax" )
+ column=(type=char(20) updatewhereclause=yes name=obj4 dbname="cwzzvoucheritem.obj4" )
+ column=(type=char(60) updatewhereclause=yes name=objname4 dbname="cwzzvoucheritem.objname4" )
+ column=(type=char(20) updatewhereclause=yes name=obj5 dbname="cwzzvoucheritem.obj5" )
+ column=(type=char(60) updatewhereclause=yes name=objname5 dbname="cwzzvoucheritem.objname5" )
+ column=(type=char(20) updatewhereclause=yes name=vouchermode dbname="cwzzvoucheritem.vouchermode" )
+ column=(type=char(20) updatewhereclause=yes name=zfbz dbname="cwzzvoucheritem.zfbz" )
+ retrieve="Select   tb.seq, 
+			tb.vouchernum, 
+			tb.accountcode, 
+			tb.zy, 
+			tb.dcflag, 
+			tb.debitvalue, 
+			tb.creditvalue, 
+			tb.debitvaluefcy, 
+			tb.creditvaluefcy, 
+			tb.ccycode, 
+			tb.excrate, 
+			tb.dept, 
+			tb.subdept, 
+			tb.area, 
+			tb.venderid, 
+			tb.category, 
+			tb.chargetype, 
+			tb.person, 
+			tb.tax, 
+			tb.xjll, 
+			tb.poptype, 
+			tb.account, 
+			tb.fwsr, 
+			tb.jyk, 
+			tb.wmid, 
+			tb.saletax, 
+
+			tb.obj4, 
+			tb.objname4, 
+			tb.obj5, 
+			tb.objname5, 
+			tb.vouchermode, 
+			tb.zfbz
+
+  From   cwzzvoucher ta,cwzzvoucheritem tb
+ Where  ta.seq = tb.seq 
+   and  (ta.accperiod = to_char(to_date(:accperiod,'yyyy-mm-dd'),'yyyymm') Or :accperiod Is Null)
+ order by tb.seq,tb.vouchernum
+" arguments=(("accperiod", string)) )
+compute(band=detail alignment="0" expression="getrow()"border="0" color="33554432" x="9" y="4" height="76" width="155" format="[GENERAL]" html.valueishtml="0"  name=compute_1 visible="1"  font.face="宋体" font.height="-9" font.weight="400"  font.family="0" font.pitch="2" font.charset="134" background.mode="2" background.color="1073741824" )
+column(band=detail id=1 alignment="0" tabsequence=0 border="0" color="33554432" x="178" y="0" height="76" width="197" html.valueishtml="0"  name=seq visible="1" edit.limit=0 edit.case=any edit.focusrectangle=no edit.autoselect=no edit.imemode=0  font.face="宋体" font.height="-9" font.weight="400"  font.family="2" font.pitch="2" font.charset="134" background.mode="2" background.color="1073741824" )
+column(band=detail id=2 alignment="0" tabsequence=0 border="0" color="33554432" x="389" y="0" height="76" width="297" html.valueishtml="0"  name=vouchernum visible="1" edit.limit=0 edit.case=any edit.focusrectangle=no edit.autoselect=no edit.imemode=0  font.face="宋体" font.height="-9" font.weight="400"  font.family="2" font.pitch="2" font.charset="134" background.mode="2" background.color="1073741824" )
+column(band=detail id=3 alignment="0" tabsequence=0 border="0" color="33554432" x="699" y="0" height="76" width="357" html.valueishtml="0"  name=accountcode visible="1" edit.limit=0 edit.case=any edit.focusrectangle=no edit.autoselect=no edit.imemode=0  font.face="宋体" font.height="-9" font.weight="400"  font.family="2" font.pitch="2" font.charset="134" background.mode="2" background.color="1073741824" )
+column(band=detail id=4 alignment="0" tabsequence=0 border="0" color="33554432" x="1070" y="0" height="76" width="933" html.valueishtml="0"  name=zy visible="1" edit.limit=0 edit.case=any edit.focusrectangle=no edit.autoselect=no edit.imemode=0  font.face="宋体" font.height="-9" font.weight="400"  font.family="2" font.pitch="2" font.charset="134" background.mode="2" background.color="1073741824" )
+column(band=detail id=5 alignment="0" tabsequence=0 border="0" color="33554432" x="2016" y="0" height="76" width="192" html.valueishtml="0"  name=dcflag visible="1" ddlb.limit=0 ddlb.allowedit=no ddlb.case=any ddlb.imemode=0  font.face="宋体" font.height="-9" font.weight="400"  font.family="2" font.pitch="2" font.charset="134" background.mode="2" background.color="1073741824" )
+column(band=detail id=10 alignment="0" tabsequence=0 border="0" color="33554432" x="3936" y="0" height="76" width="311" html.valueishtml="0"  name=ccycode visible="1" edit.limit=0 edit.case=any edit.focusrectangle=no edit.autoselect=no edit.imemode=0  font.face="宋体" font.height="-9" font.weight="400"  font.family="2" font.pitch="2" font.charset="134" background.mode="2" background.color="1073741824" )
+column(band=detail id=11 alignment="0" tabsequence=0 border="0" color="33554432" x="4261" y="0" height="76" width="155" html.valueishtml="0"  name=excrate visible="1" edit.limit=0 edit.case=any edit.focusrectangle=no edit.autoselect=no edit.imemode=0  font.face="宋体" font.height="-9" font.weight="400"  font.family="2" font.pitch="2" font.charset="134" background.mode="2" background.color="1073741824" )
+column(band=detail id=12 alignment="0" tabsequence=0 border="0" color="33554432" x="4430" y="0" height="76" width="567" html.valueishtml="0"  name=dept visible="1" dddw.name=d_dd_shop dddw.displaycolumn=shopname dddw.datacolumn=shopid dddw.percentwidth=0 dddw.lines=0 dddw.limit=0 dddw.allowedit=no dddw.useasborder=no dddw.case=any dddw.imemode=0  font.face="宋体" font.height="-9" font.weight="400"  font.family="2" font.pitch="2" font.charset="134" background.mode="2" background.color="1073741824" )
+column(band=detail id=13 alignment="0" tabsequence=0 border="0" color="33554432" x="5010" y="0" height="76" width="462" html.valueishtml="0"  name=subdept visible="1" edit.limit=0 edit.case=any edit.focusrectangle=no edit.autoselect=no edit.imemode=0  font.face="宋体" font.height="-9" font.weight="400"  font.family="2" font.pitch="2" font.charset="134" background.mode="2" background.color="1073741824" )
+column(band=detail id=14 alignment="0" tabsequence=0 border="0" color="33554432" x="5486" y="0" height="76" width="462" html.valueishtml="0"  name=area visible="1" edit.limit=0 edit.case=any edit.focusrectangle=no edit.autoselect=no edit.imemode=0  font.face="宋体" font.height="-9" font.weight="400"  font.family="2" font.pitch="2" font.charset="134" background.mode="2" background.color="1073741824" )
+column(band=detail id=15 alignment="0" tabsequence=0 border="0" color="33554432" x="5961" y="0" height="76" width="631" html.valueishtml="0"  name=venderid visible="1" dddw.name=d_dd_gys dddw.displaycolumn=name dddw.datacolumn=code dddw.percentwidth=0 dddw.lines=0 dddw.limit=0 dddw.allowedit=no dddw.useasborder=no dddw.case=any dddw.imemode=0  font.face="宋体" font.height="-9" font.weight="400"  font.family="2" font.pitch="2" font.charset="134" background.mode="2" background.color="1073741824" )
+column(band=detail id=16 alignment="0" tabsequence=0 border="0" color="33554432" x="6606" y="0" height="76" width="631" html.valueishtml="0"  name=category visible="1" dddw.name=d_dd_goodscat_dl dddw.displaycolumn=name dddw.datacolumn=id dddw.percentwidth=0 dddw.lines=0 dddw.limit=0 dddw.allowedit=no dddw.useasborder=no dddw.case=any dddw.imemode=0  font.face="宋体" font.height="-9" font.weight="400"  font.family="2" font.pitch="2" font.charset="134" background.mode="2" background.color="1073741824" )
+column(band=detail id=17 alignment="0" tabsequence=0 border="0" color="33554432" x="7250" y="0" height="76" width="256" html.valueishtml="0"  name=chargetype visible="1" edit.limit=0 edit.case=any edit.focusrectangle=no edit.autoselect=no edit.imemode=0  font.face="宋体" font.height="-9" font.weight="400"  font.family="2" font.pitch="2" font.charset="134" background.mode="2" background.color="1073741824" )
+column(band=detail id=18 alignment="0" tabsequence=0 border="0" color="33554432" x="7520" y="0" height="76" width="366" html.valueishtml="0"  name=person visible="1" edit.limit=0 edit.case=any edit.focusrectangle=no edit.autoselect=no edit.imemode=0  font.face="宋体" font.height="-9" font.weight="400"  font.family="2" font.pitch="2" font.charset="134" background.mode="2" background.color="1073741824" )
+column(band=detail id=19 alignment="0" tabsequence=0 border="0" color="33554432" x="7899" y="0" height="76" width="320" html.valueishtml="0"  name=tax visible="1" edit.limit=0 edit.case=any edit.focusrectangle=no edit.autoselect=no edit.imemode=0  font.face="宋体" font.height="-9" font.weight="400"  font.family="2" font.pitch="2" font.charset="134" background.mode="2" background.color="1073741824" )
+column(band=detail id=20 alignment="0" tabsequence=0 border="0" color="33554432" x="8233" y="0" height="76" width="402" html.valueishtml="0"  name=xjll visible="1" edit.limit=0 edit.case=any edit.focusrectangle=no edit.autoselect=no edit.imemode=0  font.face="宋体" font.height="-9" font.weight="400"  font.family="2" font.pitch="2" font.charset="134" background.mode="2" background.color="1073741824" )
+column(band=detail id=21 alignment="0" tabsequence=0 border="0" color="33554432" x="8649" y="0" height="76" width="631" html.valueishtml="0"  name=poptype visible="1" edit.limit=0 edit.case=any edit.focusrectangle=no edit.autoselect=no edit.imemode=0  font.face="宋体" font.height="-9" font.weight="400"  font.family="2" font.pitch="2" font.charset="134" background.mode="2" background.color="1073741824" )
+column(band=detail id=22 alignment="0" tabsequence=0 border="0" color="33554432" x="9294" y="0" height="76" width="347" html.valueishtml="0"  name=account visible="1" edit.limit=0 edit.case=any edit.focusrectangle=no edit.autoselect=no edit.imemode=0  font.face="宋体" font.height="-9" font.weight="400"  font.family="2" font.pitch="2" font.charset="134" background.mode="2" background.color="1073741824" )
+column(band=detail id=23 alignment="0" tabsequence=0 border="0" color="33554432" x="9655" y="0" height="76" width="631" html.valueishtml="0"  name=fwsr visible="1" edit.limit=0 edit.case=any edit.focusrectangle=no edit.autoselect=no edit.imemode=0  font.face="宋体" font.height="-9" font.weight="400"  font.family="2" font.pitch="2" font.charset="134" background.mode="2" background.color="1073741824" )
+column(band=detail id=24 alignment="0" tabsequence=0 border="0" color="33554432" x="10299" y="0" height="76" width="631" html.valueishtml="0"  name=jyk visible="1" edit.limit=0 edit.case=any edit.focusrectangle=no edit.autoselect=no edit.imemode=0  font.face="宋体" font.height="-9" font.weight="400"  font.family="2" font.pitch="2" font.charset="134" background.mode="2" background.color="1073741824" )
+column(band=detail id=25 alignment="0" tabsequence=0 border="0" color="33554432" x="10944" y="0" height="76" width="631" html.valueishtml="0"  name=wmid visible="1" edit.limit=0 edit.case=any edit.focusrectangle=no edit.autoselect=no edit.imemode=0  font.face="宋体" font.height="-9" font.weight="400"  font.family="2" font.pitch="2" font.charset="134" background.mode="2" background.color="1073741824" )
+column(band=detail id=26 alignment="0" tabsequence=0 border="0" color="33554432" x="11589" y="0" height="76" width="631" html.valueishtml="0"  name=saletax visible="1" edit.limit=0 edit.case=any edit.focusrectangle=no edit.autoselect=no edit.imemode=0  font.face="宋体" font.height="-9" font.weight="400"  font.family="2" font.pitch="2" font.charset="134" background.mode="2" background.color="1073741824" )
+column(band=detail id=27 alignment="0" tabsequence=0 border="0" color="33554432" x="12238" y="0" height="76" width="631" html.valueishtml="0"  name=obj4 visible="1" edit.limit=0 edit.case=any edit.focusrectangle=no edit.autoselect=no edit.imemode=0  font.face="宋体" font.height="-9" font.weight="400"  font.family="2" font.pitch="2" font.charset="134" background.mode="2" background.color="1073741824" )
+column(band=detail id=28 alignment="0" tabsequence=0 border="0" color="33554432" x="12882" y="0" height="76" width="603" html.valueishtml="0"  name=objname4 visible="1" edit.limit=0 edit.case=any edit.focusrectangle=no edit.autoselect=no edit.imemode=0  font.face="宋体" font.height="-9" font.weight="400"  font.family="2" font.pitch="2" font.charset="134" background.mode="2" background.color="1073741824" )
+column(band=detail id=29 alignment="0" tabsequence=0 border="0" color="33554432" x="13499" y="0" height="76" width="631" html.valueishtml="0"  name=obj5 visible="1" edit.limit=0 edit.case=any edit.focusrectangle=no edit.autoselect=no edit.imemode=0  font.face="宋体" font.height="-9" font.weight="400"  font.family="2" font.pitch="2" font.charset="134" background.mode="2" background.color="1073741824" )
+column(band=detail id=30 alignment="0" tabsequence=0 border="0" color="33554432" x="14144" y="0" height="76" width="617" html.valueishtml="0"  name=objname5 visible="1" edit.limit=0 edit.case=any edit.focusrectangle=no edit.autoselect=no edit.imemode=0  font.face="宋体" font.height="-9" font.weight="400"  font.family="2" font.pitch="2" font.charset="134" background.mode="2" background.color="1073741824" )
+column(band=detail id=31 alignment="0" tabsequence=0 border="0" color="33554432" x="14775" y="0" height="76" width="631" html.valueishtml="0"  name=vouchermode visible="1" dddw.name=d_dd_cwzztype dddw.displaycolumn=name dddw.datacolumn=code dddw.percentwidth=0 dddw.lines=0 dddw.limit=0 dddw.allowedit=no dddw.useasborder=no dddw.case=any dddw.imemode=0  font.face="宋体" font.height="-9" font.weight="400"  font.family="2" font.pitch="2" font.charset="134" background.mode="2" background.color="1073741824" )
+column(band=detail id=32 alignment="0" tabsequence=0 border="0" color="33554432" x="15419" y="0" height="76" width="631" html.valueishtml="0"  name=zfbz visible="1" edit.limit=0 edit.case=any edit.focusrectangle=no edit.autoselect=no edit.imemode=0  font.face="宋体" font.height="-9" font.weight="400"  font.family="2" font.pitch="2" font.charset="134" background.mode="2" background.color="1073741824" )
+text(band=header alignment="2" text="行号" border="0" color="33554432" x="9" y="8" height="56" width="155" html.valueishtml="0"  name=t_1 visible="1"  font.face="宋体" font.height="-9" font.weight="400"  font.family="0" font.pitch="2" font.charset="134" background.mode="2" background.color="1073741824" )
+text(band=header alignment="2" text="序号" border="0" color="33554432" x="174" y="4" height="56" width="201" html.valueishtml="0"  name=seq_t visible="1"  font.face="宋体" font.height="-9" font.weight="400"  font.family="2" font.pitch="2" font.charset="134" background.mode="2" background.color="1073741824" )
+text(band=header alignment="2" text="凭证分录号" border="0" color="33554432" x="384" y="4" height="56" width="302" html.valueishtml="0"  name=vouchernum_t visible="1"  font.face="宋体" font.height="-9" font.weight="400"  font.family="2" font.pitch="2" font.charset="134" background.mode="2" background.color="1073741824" )
+text(band=header alignment="2" text="会计科目" border="0" color="33554432" x="695" y="4" height="56" width="361" html.valueishtml="0"  name=accountcode_t visible="1"  font.face="宋体" font.height="-9" font.weight="400"  font.family="2" font.pitch="2" font.charset="134" background.mode="2" background.color="1073741824" )
+text(band=header alignment="2" text="摘要" border="0" color="33554432" x="1065" y="4" height="56" width="937" html.valueishtml="0"  name=zy_t visible="1"  font.face="宋体" font.height="-9" font.weight="400"  font.family="2" font.pitch="2" font.charset="134" background.mode="2" background.color="1073741824" )
+text(band=header alignment="2" text="借贷" border="0" color="33554432" x="2011" y="4" height="56" width="197" html.valueishtml="0"  name=dcflag_t visible="1"  font.face="宋体" font.height="-9" font.weight="400"  font.family="2" font.pitch="2" font.charset="134" background.mode="2" background.color="1073741824" )
+text(band=header alignment="2" text="借方金额" border="0" color="33554432" x="2217" y="4" height="56" width="407" html.valueishtml="0"  name=debitvalue_t visible="1"  font.face="宋体" font.height="-9" font.weight="400"  font.family="2" font.pitch="2" font.charset="134" background.mode="2" background.color="1073741824" )
+text(band=header alignment="2" text="贷方金额" border="0" color="33554432" x="2633" y="4" height="56" width="402" html.valueishtml="0"  name=creditvalue_t visible="1"  font.face="宋体" font.height="-9" font.weight="400"  font.family="2" font.pitch="2" font.charset="134" background.mode="2" background.color="1073741824" )
+text(band=header alignment="2" text="复币借方金额" border="0" color="33554432" x="3045" y="4" height="56" width="430" html.valueishtml="0"  name=debitvaluefcy_t visible="1"  font.face="宋体" font.height="-9" font.weight="400"  font.family="2" font.pitch="2" font.charset="134" background.mode="2" background.color="1073741824" )
+text(band=header alignment="2" text="复币贷方金额" border="0" color="33554432" x="3483" y="4" height="56" width="439" html.valueishtml="0"  name=creditvaluefcy_t visible="1"  font.face="宋体" font.height="-9" font.weight="400"  font.family="2" font.pitch="2" font.charset="134" background.mode="2" background.color="1073741824" )
+text(band=header alignment="2" text="币种" border="0" color="33554432" x="3931" y="4" height="56" width="315" html.valueishtml="0"  name=ccycode_t visible="1"  font.face="宋体" font.height="-9" font.weight="400"  font.family="2" font.pitch="2" font.charset="134" background.mode="2" background.color="1073741824" )
+text(band=header alignment="2" text="汇率" border="0" color="33554432" x="4256" y="4" height="56" width="160" html.valueishtml="0"  name=excrate_t visible="1"  font.face="宋体" font.height="-9" font.weight="400"  font.family="2" font.pitch="2" font.charset="134" background.mode="2" background.color="1073741824" )
+text(band=header alignment="2" text="部门" border="0" color="33554432" x="4425" y="4" height="56" width="571" html.valueishtml="0"  name=dept_t visible="1"  font.face="宋体" font.height="-9" font.weight="400"  font.family="2" font.pitch="2" font.charset="134" background.mode="2" background.color="1073741824" )
+text(band=header alignment="2" text="二级部门" border="0" color="33554432" x="5006" y="4" height="56" width="466" html.valueishtml="0"  name=subdept_t visible="1"  font.face="宋体" font.height="-9" font.weight="400"  font.family="2" font.pitch="2" font.charset="134" background.mode="2" background.color="1073741824" )
+text(band=header alignment="2" text="区域" border="0" color="33554432" x="5481" y="4" height="56" width="466" html.valueishtml="0"  name=area_t visible="1"  font.face="宋体" font.height="-9" font.weight="400"  font.family="2" font.pitch="2" font.charset="134" background.mode="2" background.color="1073741824" )
+text(band=header alignment="2" text="客商" border="0" color="33554432" x="5957" y="4" height="56" width="635" html.valueishtml="0"  name=venderid_t visible="1"  font.face="宋体" font.height="-9" font.weight="400"  font.family="2" font.pitch="2" font.charset="134" background.mode="2" background.color="1073741824" )
+text(band=header alignment="2" text="品类" border="0" color="33554432" x="6601" y="4" height="56" width="635" html.valueishtml="0"  name=category_t visible="1"  font.face="宋体" font.height="-9" font.weight="400"  font.family="2" font.pitch="2" font.charset="134" background.mode="2" background.color="1073741824" )
+text(band=header alignment="2" text="费用类型" border="0" color="33554432" x="7246" y="4" height="56" width="261" html.valueishtml="0"  name=chargetype_t visible="1"  font.face="宋体" font.height="-9" font.weight="400"  font.family="2" font.pitch="2" font.charset="134" background.mode="2" background.color="1073741824" )
+text(band=header alignment="2" text="人员" border="0" color="33554432" x="7515" y="4" height="56" width="370" html.valueishtml="0"  name=person_t visible="1"  font.face="宋体" font.height="-9" font.weight="400"  font.family="2" font.pitch="2" font.charset="134" background.mode="2" background.color="1073741824" )
+text(band=header alignment="2" text="税率" border="0" color="33554432" x="7895" y="4" height="56" width="325" html.valueishtml="0"  name=tax_t visible="1"  font.face="宋体" font.height="-9" font.weight="400"  font.family="2" font.pitch="2" font.charset="134" background.mode="2" background.color="1073741824" )
+text(band=header alignment="2" text="现金流量项目" border="0" color="33554432" x="8229" y="4" height="56" width="407" html.valueishtml="0"  name=xjll_t visible="1"  font.face="宋体" font.height="-9" font.weight="400"  font.family="2" font.pitch="2" font.charset="134" background.mode="2" background.color="1073741824" )
+text(band=header alignment="2" text="促销活动项目" border="0" color="33554432" x="8645" y="4" height="56" width="635" html.valueishtml="0"  name=poptype_t visible="1"  font.face="宋体" font.height="-9" font.weight="400"  font.family="2" font.pitch="2" font.charset="134" background.mode="2" background.color="1073741824" )
+text(band=header alignment="2" text="账户档案" border="0" color="33554432" x="9289" y="4" height="56" width="352" html.valueishtml="0"  name=cwzzvoucheritem_account_t visible="1"  font.face="宋体" font.height="-9" font.weight="400"  font.family="2" font.pitch="2" font.charset="134" background.mode="2" background.color="1073741824" )
+text(band=header alignment="2" text="备用辅助核算1" border="0" color="33554432" x="9650" y="4" height="56" width="635" html.valueishtml="0"  name=fwsr_t visible="1"  font.face="宋体" font.height="-9" font.weight="400"  font.family="2" font.pitch="2" font.charset="134" background.mode="2" background.color="1073741824" )
+text(band=header alignment="2" text="备用辅助核算2" border="0" color="33554432" x="10295" y="4" height="56" width="635" html.valueishtml="0"  name=jyk_t visible="1"  font.face="宋体" font.height="-9" font.weight="400"  font.family="2" font.pitch="2" font.charset="134" background.mode="2" background.color="1073741824" )
+text(band=header alignment="2" text="经营方式" border="0" color="33554432" x="10939" y="4" height="56" width="635" html.valueishtml="0"  name=wmid_t visible="1"  font.face="宋体" font.height="-9" font.weight="400"  font.family="2" font.pitch="2" font.charset="134" background.mode="2" background.color="1073741824" )
+text(band=header alignment="2" text="销项税率" border="0" color="33554432" x="11584" y="4" height="56" width="635" html.valueishtml="0"  name=saletax_t visible="1"  font.face="宋体" font.height="-9" font.weight="400"  font.family="2" font.pitch="2" font.charset="134" background.mode="2" background.color="1073741824" )
+text(band=header alignment="2" text="备用辅助核算3" border="0" color="33554432" x="12233" y="4" height="56" width="635" html.valueishtml="0"  name=obj4_t visible="1"  font.face="宋体" font.height="-9" font.weight="400"  font.family="2" font.pitch="2" font.charset="134" background.mode="2" background.color="1073741824" )
+text(band=header alignment="2" text="备用辅助核算4" border="0" color="33554432" x="12878" y="4" height="56" width="608" html.valueishtml="0"  name=objname4_t visible="1"  font.face="宋体" font.height="-9" font.weight="400"  font.family="2" font.pitch="2" font.charset="134" background.mode="2" background.color="1073741824" )
+text(band=header alignment="2" text="备用辅助核算5" border="0" color="33554432" x="13495" y="4" height="56" width="635" html.valueishtml="0"  name=obj5_t visible="1"  font.face="宋体" font.height="-9" font.weight="400"  font.family="2" font.pitch="2" font.charset="134" background.mode="2" background.color="1073741824" )
+text(band=header alignment="2" text="备用辅助核算6" border="0" color="33554432" x="14139" y="4" height="56" width="622" html.valueishtml="0"  name=objname5_t visible="1"  font.face="宋体" font.height="-9" font.weight="400"  font.family="2" font.pitch="2" font.charset="134" background.mode="2" background.color="1073741824" )
+text(band=header alignment="2" text="凭证模型代码" border="0" color="33554432" x="14770" y="4" height="56" width="635" html.valueishtml="0"  name=vouchermode_t visible="1"  font.face="宋体" font.height="-9" font.weight="400"  font.family="2" font.pitch="2" font.charset="134" background.mode="2" background.color="1073741824" )
+text(band=header alignment="2" text="政府补助" border="0" color="33554432" x="15415" y="4" height="56" width="635" html.valueishtml="0"  name=zfbz_t visible="1"  font.face="宋体" font.height="-9" font.weight="400"  font.family="2" font.pitch="2" font.charset="134" background.mode="2" background.color="1073741824" )
+column(band=detail id=8 alignment="1" tabsequence=0 border="0" color="33554432" x="3049" y="0" height="76" width="425" html.valueishtml="0"  name=debitvaluefcy visible="1" edit.limit=0 edit.case=any edit.focusrectangle=no edit.autoselect=no edit.imemode=0  font.face="宋体" font.height="-9" font.weight="400"  font.family="2" font.pitch="2" font.charset="134" background.mode="2" background.color="1073741824" )
+column(band=detail id=9 alignment="1" tabsequence=0 border="0" color="33554432" x="3488" y="0" height="76" width="434" html.valueishtml="0"  name=creditvaluefcy visible="1" edit.limit=0 edit.case=any edit.focusrectangle=no edit.autoselect=no edit.imemode=0  font.face="宋体" font.height="-9" font.weight="400"  font.family="2" font.pitch="2" font.charset="134" background.mode="2" background.color="1073741824" )
+column(band=detail id=7 alignment="1" tabsequence=0 border="0" color="33554432" x="2638" y="0" height="76" width="398" html.valueishtml="0"  name=creditvalue visible="1" edit.limit=0 edit.case=any edit.focusrectangle=no edit.autoselect=no edit.imemode=0  font.face="宋体" font.height="-9" font.weight="400"  font.family="2" font.pitch="2" font.charset="134" background.mode="2" background.color="1073741824" )
+column(band=detail id=6 alignment="1" tabsequence=0 border="0" color="33554432" x="2222" y="0" height="76" width="402" html.valueishtml="0"  name=debitvalue visible="1" edit.limit=0 edit.case=any edit.focusrectangle=no edit.autoselect=no edit.imemode=0  font.face="宋体" font.height="-9" font.weight="400"  font.family="2" font.pitch="2" font.charset="134" background.mode="2" background.color="1073741824" )
+compute(band=summary alignment="1" expression="sum(debitvalue for all)"border="0" color="33554432" x="2217" y="4" height="56" width="407" format="[general]" html.valueishtml="0"  name=compute_5 visible="1"  font.face="宋体" font.height="-9" font.weight="700"  font.family="0" font.pitch="2" font.charset="134" background.mode="2" background.color="1073741824" )
+compute(band=summary alignment="1" expression="sum(creditvalue for all)"border="0" color="33554432" x="2633" y="4" height="56" width="402" format="[general]" html.valueishtml="0"  name=compute_4 visible="1"  font.face="宋体" font.height="-9" font.weight="700"  font.family="0" font.pitch="2" font.charset="134" background.mode="2" background.color="1073741824" )
+compute(band=summary alignment="1" expression="sum(debitvaluefcy for all)"border="0" color="33554432" x="3045" y="4" height="56" width="430" format="[general]" html.valueishtml="0"  name=compute_2 visible="1"  font.face="宋体" font.height="-9" font.weight="700"  font.family="0" font.pitch="2" font.charset="134" background.mode="2" background.color="1073741824" )
+compute(band=summary alignment="1" expression="sum(creditvaluefcy for all)"border="0" color="33554432" x="3483" y="4" height="56" width="439" format="[general]" html.valueishtml="0"  name=compute_3 visible="1"  font.face="宋体" font.height="-9" font.weight="700"  font.family="0" font.pitch="2" font.charset="134" background.mode="2" background.color="1073741824" )
+htmltable(border="1" )
+htmlgen(clientevents="1" clientvalidation="1" clientcomputedfields="1" clientformatting="0" clientscriptable="0" generatejavascript="1" encodeselflinkargs="1" netscapelayers="0" )
+export.xml(headgroups="1" includewhitespace="0" metadatatype=0 savemetadata=0 )
+import.xml()
+export.pdf(method=0 distill.custompostscript="0" xslfop.print="0" )
+ 

@@ -1,0 +1,11 @@
+Save Format v3.0(19990112)
+@begin Unchecked
+ 0 "FTFRM\\YZftfinapp.pbt";
+@end;
+@begin Targets
+ 0 "FTFRM\\ftfinapp.pbt";
+ 1 "FTFRM\\finupdate.pbt";
+ 2 "FTFRM\\finupload.pbt";
+@end;
+DefaultTarget "FTFRM\\ftfinapp.pbt";
+DefaultRemoteTarget "FTFRM\\ftfinapp.pbt";

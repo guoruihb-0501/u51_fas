@@ -1,0 +1,10 @@
+Save Format v3.0(19990112)
+@begin Unchecked
+@end;
+@begin Targets
+ 0 "ftfinapp.pbt";
+ 1 "finupload.pbt";
+ 2 "finupdate.pbt";
+@end;
+DefaultTarget "ftfinapp.pbt";
+DefaultRemoteTarget "ftfinapp.pbt";

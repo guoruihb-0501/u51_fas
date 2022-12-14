@@ -1,0 +1,8 @@
+FTFIN_CYK     --辽宁海城潮衣库
+FTFIN_JJLS    --九江联盛
+FTFIN_BG      --石家庄北国
+FTFIN_PYBX    --濮阳百姓
+FTFIN_GZXDJ   --汕头鲜当家
+FTFIN_LYJZ    --临沂九州
+FTFIN_RZBH    --日百  从九州复制粘贴得到
+FTFIN_DYSD    --东营胜大

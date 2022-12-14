@@ -1,0 +1,136 @@
+$PBExportHeader$d_cwzzvouchersd_list.srd
+release 9;
+datawindow(units=0 timer_interval=0 color=1073741824 processing=1 HTMLDW=no print.printername="" print.documentname="" print.orientation = 0 print.margin.left = 110 print.margin.right = 110 print.margin.top = 96 print.margin.bottom = 96 print.paper.source = 0 print.paper.size = 0 print.canusedefaultprinter=yes print.prompt=no print.buttons=no print.preview.buttons=no print.cliptext=no print.overrideprintjob=no print.collate=yes hidegrayline=no grid.lines=0 )
+header(height=80 color="536870912" )
+summary(height=0 color="536870912" )
+footer(height=0 color="536870912" )
+detail(height=84 color="536870912" )
+table(column=(type=decimal(0) updatewhereclause=yes name=seq dbname="cwzzvoucher.seq" )
+ column=(type=char(30) updatewhereclause=yes key=yes name=voucherno dbname="cwzzvoucher.voucherno" )
+ column=(type=char(6) updatewhereclause=yes key=yes name=accperiod dbname="cwzzvoucher.accperiod" )
+ column=(type=datetime updatewhereclause=yes name=voucherdate dbname="cwzzvoucher.voucherdate" )
+ column=(type=char(10) updatewhereclause=yes name=bookno dbname="cwzzvoucher.bookno" )
+ column=(type=char(30) updatewhereclause=yes key=yes name=fbookno dbname="cwzzvoucher.fbookno" )
+ column=(type=char(30) updatewhereclause=yes name=vouchertype dbname="cwzzvoucher.vouchertype" )
+ column=(type=char(30) updatewhereclause=yes key=yes name=vouchermode dbname="cwzzvoucher.vouchermode" )
+ column=(type=char(1) updatewhereclause=yes name=voucherflag dbname="cwzzvoucher.voucherflag" values="是	Y/否	N/" )
+ column=(type=char(1) updatewhereclause=yes name=auditflag dbname="cwzzvoucher.auditflag" values="是	Y/否	N/" )
+ column=(type=char(1) updatewhereclause=yes name=outflag dbname="cwzzvoucher.outflag" values="是	Y/否	N/" )
+ column=(type=char(1) updatewhereclause=yes name=datasource dbname="cwzzvoucher.datasource" )
+ column=(type=decimal(0) updatewhereclause=yes name=attachmentnum dbname="cwzzvoucher.attachmentnum" )
+ column=(type=char(50) updatewhereclause=yes name=inputer dbname="cwzzvoucher.inputer" )
+ column=(type=datetime updatewhereclause=yes name=inputdate dbname="cwzzvoucher.inputdate" )
+ column=(type=decimal(0) updatewhereclause=yes name=exportnum dbname="cwzzvoucher.exportnum" )
+ column=(type=char(50) updatewhereclause=yes name=lastexporter dbname="cwzzvoucher.lastexporter" )
+ column=(type=datetime updatewhereclause=yes name=lastexportdate dbname="cwzzvoucher.lastexportdate" )
+ column=(type=char(50) updatewhereclause=yes name=auditor dbname="cwzzvoucher.auditor" )
+ column=(type=datetime updatewhereclause=yes name=auditdate dbname="cwzzvoucher.auditdate" )
+ column=(type=char(100) updatewhereclause=yes name=memo dbname="cwzzvoucher.memo" )
+ column=(type=char(20) updatewhereclause=yes name=cwaccountno dbname="cwzzvoucher.cwaccountno" )
+ column=(type=number updatewhereclause=yes name=batch dbname="cwzzvoucher.batch" )
+ column=(type=decimal(0) updatewhereclause=yes name=gencmdseq dbname="cwzzvoucher.gencmdseq" )
+ column=(type=char(20) updatewhereclause=yes name=shopid dbname="cwzzvoucher.shopid" )
+ column=(type=char(4) updatewhereclause=yes name=accyear dbname="cwzzvoucher.accyear" )
+ column=(type=char(2) updatewhereclause=yes name=accmonth dbname="cwzzvoucher.accmonth" )
+ column=(type=char(10) updatewhereclause=yes name=accdate dbname="cwzzvoucher.accdate" )
+ column=(type=char(50) updatewhereclause=yes name=inputer_nc dbname="cwzzvoucher.inputer_nc" )
+ retrieve="Select   seq, 
+			voucherno, 
+			accperiod, 
+			voucherdate, 
+			bookno, 
+			fbookno, 
+			vouchertype, 
+			vouchermode, 
+			voucherflag, 
+			auditflag, 
+			outflag, 
+			datasource, 
+			attachmentnum, 
+			inputer, 
+			inputdate, 
+			exportnum, 
+			lastexporter, 
+			lastexportdate, 
+			auditor, 
+			auditdate, 
+			memo, 
+			cwaccountno, 
+			batch, 
+			gencmdseq, 
+			shopid, 
+			accyear, 
+			accmonth, 
+			accdate, 
+			inputer_nc
+
+  From   cwzzvoucher
+ Where   (accperiod = to_char(to_date(:accperiod,'yyyy-mm-dd'),'yyyymm') Or :accperiod Is Null)
+ order by seq,voucherno
+" update="cwzzvoucher" updatewhere=0 updatekeyinplace=no arguments=(("accperiod", string)) )
+compute(band=detail alignment="0" expression="getrow()"border="0" color="33554432" x="9" y="4" height="76" width="155" format="[GENERAL]" html.valueishtml="0"  name=compute_1 visible="1"  font.face="宋体" font.height="-9" font.weight="400"  font.family="0" font.pitch="2" font.charset="134" background.mode="2" background.color="1073741824" )
+column(band=detail id=1 alignment="0" tabsequence=32766 border="0" color="33554432" x="174" y="0" height="76" width="256" format="[general]" html.valueishtml="0"  name=seq visible="1" edit.limit=0 edit.case=any edit.focusrectangle=no edit.autoselect=no edit.imemode=0  font.face="宋体" font.height="-9" font.weight="400"  font.family="0" font.pitch="2" font.charset="134" background.mode="2" background.color="1073741824" )
+column(band=detail id=2 alignment="0" tabsequence=32766 border="0" color="33554432" x="439" y="0" height="76" width="219" format="[general]" html.valueishtml="0"  name=voucherno visible="1" edit.limit=0 edit.case=any edit.focusrectangle=no edit.autoselect=no edit.imemode=0  font.face="宋体" font.height="-9" font.weight="400"  font.family="0" font.pitch="2" font.charset="134" background.mode="2" background.color="1073741824" )
+column(band=detail id=3 alignment="0" tabsequence=32766 border="0" color="33554432" x="667" y="0" height="76" width="443" format="[general]" html.valueishtml="0"  name=accperiod visible="1" edit.limit=0 edit.case=any edit.focusrectangle=no edit.autoselect=no edit.imemode=0  font.face="宋体" font.height="-9" font.weight="400"  font.family="0" font.pitch="2" font.charset="134" background.mode="2" background.color="1073741824" )
+column(band=detail id=4 alignment="0" tabsequence=32766 border="0" color="33554432" x="1120" y="0" height="76" width="489" format="[shortdate] [time]" html.valueishtml="0"  name=voucherdate visible="1" edit.limit=0 edit.case=any edit.focusrectangle=no edit.autoselect=no edit.imemode=0  font.face="宋体" font.height="-9" font.weight="400"  font.family="0" font.pitch="2" font.charset="134" background.mode="2" background.color="1073741824" )
+column(band=detail id=5 alignment="0" tabsequence=32766 border="0" color="33554432" x="1618" y="0" height="76" width="549" format="[general]" html.valueishtml="0"  name=bookno visible="1" dddw.name=d_dd_accsub dddw.displaycolumn=name dddw.datacolumn=id dddw.percentwidth=0 dddw.lines=0 dddw.limit=0 dddw.allowedit=no dddw.useasborder=no dddw.case=any dddw.imemode=0  font.face="宋体" font.height="-9" font.weight="400"  font.family="0" font.pitch="2" font.charset="134" background.mode="2" background.color="1073741824" )
+column(band=detail id=6 alignment="0" tabsequence=32766 border="0" color="33554432" x="2176" y="0" height="76" width="594" format="[general]" html.valueishtml="0"  name=fbookno visible="1" edit.limit=0 edit.case=any edit.focusrectangle=no edit.autoselect=no edit.imemode=0  font.face="宋体" font.height="-9" font.weight="400"  font.family="0" font.pitch="2" font.charset="134" background.mode="2" background.color="1073741824" )
+column(band=detail id=7 alignment="0" tabsequence=32766 border="0" color="33554432" x="2779" y="0" height="76" width="773" format="[general]" html.valueishtml="0"  name=vouchertype visible="1" edit.limit=0 edit.case=any edit.focusrectangle=no edit.autoselect=no edit.imemode=0  font.face="宋体" font.height="-9" font.weight="400"  font.family="0" font.pitch="2" font.charset="134" background.mode="2" background.color="1073741824" )
+column(band=detail id=8 alignment="0" tabsequence=32766 border="0" color="33554432" x="3561" y="0" height="76" width="613" format="[general]" html.valueishtml="0"  name=vouchermode visible="1" edit.limit=0 edit.case=any edit.focusrectangle=no edit.autoselect=no edit.imemode=0  font.face="宋体" font.height="-9" font.weight="400"  font.family="0" font.pitch="2" font.charset="134" background.mode="2" background.color="1073741824" )
+column(band=detail id=9 alignment="0" tabsequence=32766 border="0" color="33554432" x="4183" y="0" height="76" width="379" format="[general]" html.valueishtml="0"  name=voucherflag visible="1" ddlb.limit=0 ddlb.allowedit=no ddlb.case=any ddlb.imemode=0  font.face="宋体" font.height="-9" font.weight="400"  font.family="0" font.pitch="2" font.charset="134" background.mode="2" background.color="1073741824" )
+column(band=detail id=10 alignment="0" tabsequence=32766 border="0" color="33554432" x="4571" y="0" height="76" width="274" format="[general]" html.valueishtml="0"  name=auditflag visible="1" ddlb.limit=0 ddlb.allowedit=no ddlb.case=any ddlb.imemode=0  font.face="宋体" font.height="-9" font.weight="400"  font.family="0" font.pitch="2" font.charset="134" background.mode="2" background.color="1073741824" )
+column(band=detail id=11 alignment="0" tabsequence=32766 border="0" color="33554432" x="4855" y="0" height="76" width="256" format="[general]" html.valueishtml="0"  name=outflag visible="1" ddlb.limit=0 ddlb.allowedit=no ddlb.case=any ddlb.imemode=0  font.face="宋体" font.height="-9" font.weight="400"  font.family="0" font.pitch="2" font.charset="134" background.mode="2" background.color="1073741824" )
+column(band=detail id=12 alignment="0" tabsequence=32766 border="0" color="33554432" x="5120" y="0" height="76" width="503" format="[general]" html.valueishtml="0"  name=datasource visible="1" edit.limit=0 edit.case=any edit.focusrectangle=no edit.autoselect=no edit.imemode=0  font.face="宋体" font.height="-9" font.weight="400"  font.family="0" font.pitch="2" font.charset="134" background.mode="2" background.color="1073741824" )
+column(band=detail id=13 alignment="0" tabsequence=32766 border="0" color="33554432" x="5632" y="0" height="76" width="576" format="[general]" html.valueishtml="0"  name=attachmentnum visible="1" edit.limit=0 edit.case=any edit.focusrectangle=no edit.autoselect=no edit.imemode=0  font.face="宋体" font.height="-9" font.weight="400"  font.family="0" font.pitch="2" font.charset="134" background.mode="2" background.color="1073741824" )
+column(band=detail id=14 alignment="0" tabsequence=32766 border="0" color="33554432" x="6217" y="0" height="76" width="443" format="[general]" html.valueishtml="0"  name=inputer visible="1" edit.limit=0 edit.case=any edit.focusrectangle=no edit.autoselect=no edit.imemode=0  font.face="宋体" font.height="-9" font.weight="400"  font.family="0" font.pitch="2" font.charset="134" background.mode="2" background.color="1073741824" )
+column(band=detail id=15 alignment="0" tabsequence=32766 border="0" color="33554432" x="6670" y="0" height="76" width="343" format="[shortdate] [time]" html.valueishtml="0"  name=inputdate visible="1" edit.limit=0 edit.case=any edit.focusrectangle=no edit.autoselect=no edit.imemode=0  font.face="宋体" font.height="-9" font.weight="400"  font.family="0" font.pitch="2" font.charset="134" background.mode="2" background.color="1073741824" )
+column(band=detail id=16 alignment="1" tabsequence=32766 border="0" color="33554432" x="7022" y="0" height="76" width="338" format="[general]" html.valueishtml="0"  name=exportnum visible="1" edit.limit=0 edit.case=any edit.focusrectangle=no edit.autoselect=no edit.imemode=0  font.face="宋体" font.height="-9" font.weight="400"  font.family="0" font.pitch="2" font.charset="134" background.mode="2" background.color="1073741824" )
+column(band=detail id=17 alignment="0" tabsequence=32766 border="0" color="33554432" x="7369" y="0" height="76" width="425" format="[general]" html.valueishtml="0"  name=lastexporter visible="1" edit.limit=0 edit.case=any edit.focusrectangle=no edit.autoselect=no edit.imemode=0  font.face="宋体" font.height="-9" font.weight="400"  font.family="0" font.pitch="2" font.charset="134" background.mode="2" background.color="1073741824" )
+column(band=detail id=18 alignment="0" tabsequence=32766 border="0" color="33554432" x="7803" y="0" height="76" width="343" format="[shortdate] [time]" html.valueishtml="0"  name=lastexportdate visible="1" edit.limit=0 edit.case=any edit.focusrectangle=no edit.autoselect=no edit.imemode=0  font.face="宋体" font.height="-9" font.weight="400"  font.family="0" font.pitch="2" font.charset="134" background.mode="2" background.color="1073741824" )
+column(band=detail id=19 alignment="0" tabsequence=32766 border="0" color="33554432" x="8155" y="0" height="76" width="247" format="[general]" html.valueishtml="0"  name=auditor visible="1" edit.limit=0 edit.case=any edit.focusrectangle=no edit.autoselect=no edit.imemode=0  font.face="宋体" font.height="-9" font.weight="400"  font.family="0" font.pitch="2" font.charset="134" background.mode="2" background.color="1073741824" )
+column(band=detail id=20 alignment="0" tabsequence=32766 border="0" color="33554432" x="8411" y="0" height="76" width="343" format="[shortdate] [time]" html.valueishtml="0"  name=auditdate visible="1" edit.limit=0 edit.case=any edit.focusrectangle=no edit.autoselect=no edit.imemode=0  font.face="宋体" font.height="-9" font.weight="400"  font.family="0" font.pitch="2" font.charset="134" background.mode="2" background.color="1073741824" )
+column(band=detail id=21 alignment="0" tabsequence=32766 border="0" color="33554432" x="8763" y="0" height="76" width="375" format="[general]" html.valueishtml="0"  name=memo visible="1" edit.limit=0 edit.case=any edit.focusrectangle=no edit.autoselect=no edit.imemode=0  font.face="宋体" font.height="-9" font.weight="400"  font.family="0" font.pitch="2" font.charset="134" background.mode="2" background.color="1073741824" )
+column(band=detail id=22 alignment="0" tabsequence=32766 border="0" color="33554432" x="9147" y="0" height="76" width="631" format="[general]" html.valueishtml="0"  name=cwaccountno visible="1" edit.limit=0 edit.case=any edit.focusrectangle=no edit.autoselect=no edit.imemode=0  font.face="宋体" font.height="-9" font.weight="400"  font.family="0" font.pitch="2" font.charset="134" background.mode="2" background.color="1073741824" )
+column(band=detail id=23 alignment="0" tabsequence=32766 border="0" color="33554432" x="9787" y="0" height="76" width="366" format="[general]" html.valueishtml="0"  name=batch visible="1" edit.limit=0 edit.case=any edit.focusrectangle=no edit.autoselect=no edit.imemode=0  font.face="宋体" font.height="-9" font.weight="400"  font.family="0" font.pitch="2" font.charset="134" background.mode="2" background.color="1073741824" )
+column(band=detail id=24 alignment="0" tabsequence=32766 border="0" color="33554432" x="10162" y="0" height="76" width="699" format="[general]" html.valueishtml="0"  name=gencmdseq visible="1" edit.limit=0 edit.case=any edit.focusrectangle=no edit.autoselect=no edit.imemode=0  font.face="宋体" font.height="-9" font.weight="400"  font.family="0" font.pitch="2" font.charset="134" background.mode="2" background.color="1073741824" )
+column(band=detail id=25 alignment="0" tabsequence=32766 border="0" color="33554432" x="10871" y="0" height="76" width="617" format="[general]" html.valueishtml="0"  name=shopid visible="1" dddw.name=d_dd_shop dddw.displaycolumn=shopname dddw.datacolumn=shopid dddw.percentwidth=0 dddw.lines=0 dddw.limit=0 dddw.allowedit=no dddw.useasborder=no dddw.case=any dddw.imemode=0  font.face="宋体" font.height="-9" font.weight="400"  font.family="0" font.pitch="2" font.charset="134" background.mode="2" background.color="1073741824" )
+column(band=detail id=26 alignment="0" tabsequence=32766 border="0" color="33554432" x="11497" y="0" height="76" width="334" format="[general]" html.valueishtml="0"  name=accyear visible="1" edit.limit=0 edit.case=any edit.focusrectangle=no edit.autoselect=no edit.imemode=0  font.face="宋体" font.height="-9" font.weight="400"  font.family="0" font.pitch="2" font.charset="134" background.mode="2" background.color="1073741824" )
+column(band=detail id=27 alignment="0" tabsequence=32766 border="0" color="33554432" x="11840" y="0" height="76" width="389" format="[general]" html.valueishtml="0"  name=accmonth visible="1" edit.limit=0 edit.case=any edit.focusrectangle=no edit.autoselect=no edit.imemode=0  font.face="宋体" font.height="-9" font.weight="400"  font.family="0" font.pitch="2" font.charset="134" background.mode="2" background.color="1073741824" )
+column(band=detail id=28 alignment="0" tabsequence=32766 border="0" color="33554432" x="12238" y="0" height="76" width="521" format="[general]" html.valueishtml="0"  name=accdate visible="1" edit.limit=0 edit.case=any edit.focusrectangle=no edit.autoselect=no edit.imemode=0  font.face="宋体" font.height="-9" font.weight="400"  font.family="0" font.pitch="2" font.charset="134" background.mode="2" background.color="1073741824" )
+column(band=detail id=29 alignment="0" tabsequence=32766 border="0" color="33554432" x="12768" y="0" height="76" width="654" format="[general]" html.valueishtml="0"  name=inputer_nc visible="1" edit.limit=0 edit.case=any edit.focusrectangle=no edit.autoselect=no edit.imemode=0  font.face="宋体" font.height="-9" font.weight="400"  font.family="0" font.pitch="2" font.charset="134" background.mode="2" background.color="1073741824" )
+text(band=header alignment="2" text="行号" border="0" color="33554432" x="9" y="8" height="56" width="155" html.valueishtml="0"  name=t_1 visible="1"  font.face="宋体" font.height="-9" font.weight="400"  font.family="0" font.pitch="2" font.charset="134" background.mode="2" background.color="1073741824" )
+text(band=header alignment="2" text="序号" border="0" color="33554432" x="174" y="4" height="76" width="256" html.valueishtml="0"  name=seq_t visible="1"  font.face="宋体" font.height="-9" font.weight="400"  font.family="0" font.pitch="2" font.charset="134" background.mode="2" background.color="1073741824" )
+text(band=header alignment="2" text="凭证号" border="0" color="33554432" x="439" y="4" height="76" width="219" html.valueishtml="0"  name=voucherno_t visible="1"  font.face="宋体" font.height="-9" font.weight="400"  font.family="0" font.pitch="2" font.charset="134" background.mode="2" background.color="1073741824" )
+text(band=header alignment="2" text="凭证核算期" border="0" color="33554432" x="667" y="4" height="76" width="443" html.valueishtml="0"  name=accperiod_t visible="1"  font.face="宋体" font.height="-9" font.weight="400"  font.family="0" font.pitch="2" font.charset="134" background.mode="2" background.color="1073741824" )
+text(band=header alignment="2" text="凭证日期" border="0" color="33554432" x="1120" y="4" height="76" width="489" html.valueishtml="0"  name=voucherdate_t visible="1"  font.face="宋体" font.height="-9" font.weight="400"  font.family="0" font.pitch="2" font.charset="134" background.mode="2" background.color="1073741824" )
+text(band=header alignment="2" text="平台账套号" border="0" color="33554432" x="1618" y="4" height="76" width="549" html.valueishtml="0"  name=bookno_t visible="1"  font.face="宋体" font.height="-9" font.weight="400"  font.family="0" font.pitch="2" font.charset="134" background.mode="2" background.color="1073741824" )
+text(band=header alignment="2" text="财务账套号" border="0" color="33554432" x="2176" y="4" height="76" width="594" html.valueishtml="0"  name=fbookno_t visible="1"  font.face="宋体" font.height="-9" font.weight="400"  font.family="0" font.pitch="2" font.charset="134" background.mode="2" background.color="1073741824" )
+text(band=header alignment="2" text="凭证类型" border="0" color="33554432" x="2779" y="4" height="76" width="773" html.valueishtml="0"  name=vouchertype_t visible="1"  font.face="宋体" font.height="-9" font.weight="400"  font.family="0" font.pitch="2" font.charset="134" background.mode="2" background.color="1073741824" )
+text(band=header alignment="2" text="凭证模型号" border="0" color="33554432" x="3561" y="4" height="76" width="613" html.valueishtml="0"  name=vouchermode_t visible="1"  font.face="宋体" font.height="-9" font.weight="400"  font.family="0" font.pitch="2" font.charset="134" background.mode="2" background.color="1073741824" )
+text(band=header alignment="2" text="凭证状态标志" border="0" color="33554432" x="4183" y="4" height="76" width="379" html.valueishtml="0"  name=voucherflag_t visible="1"  font.face="宋体" font.height="-9" font.weight="400"  font.family="0" font.pitch="2" font.charset="134" background.mode="2" background.color="1073741824" )
+text(band=header alignment="2" text="审核标志" border="0" color="33554432" x="4571" y="4" height="76" width="274" html.valueishtml="0"  name=auditflag_t visible="1"  font.face="宋体" font.height="-9" font.weight="400"  font.family="0" font.pitch="2" font.charset="134" background.mode="2" background.color="1073741824" )
+text(band=header alignment="2" text="转出标志" border="0" color="33554432" x="4855" y="4" height="76" width="256" html.valueishtml="0"  name=outflag_t visible="1"  font.face="宋体" font.height="-9" font.weight="400"  font.family="0" font.pitch="2" font.charset="134" background.mode="2" background.color="1073741824" )
+text(band=header alignment="2" text="数据来源" border="0" color="33554432" x="5120" y="4" height="76" width="503" html.valueishtml="0"  name=datasource_t visible="1"  font.face="宋体" font.height="-9" font.weight="400"  font.family="0" font.pitch="2" font.charset="134" background.mode="2" background.color="1073741824" )
+text(band=header alignment="2" text="附件张数" border="0" color="33554432" x="5632" y="4" height="76" width="576" html.valueishtml="0"  name=attachmentnum_t visible="1"  font.face="宋体" font.height="-9" font.weight="400"  font.family="0" font.pitch="2" font.charset="134" background.mode="2" background.color="1073741824" )
+text(band=header alignment="2" text="制单人" border="0" color="33554432" x="6217" y="4" height="76" width="443" html.valueishtml="0"  name=inputer_t visible="1"  font.face="宋体" font.height="-9" font.weight="400"  font.family="0" font.pitch="2" font.charset="134" background.mode="2" background.color="1073741824" )
+text(band=header alignment="2" text="制单时间" border="0" color="33554432" x="6670" y="4" height="76" width="343" html.valueishtml="0"  name=inputdate_t visible="1"  font.face="宋体" font.height="-9" font.weight="400"  font.family="0" font.pitch="2" font.charset="134" background.mode="2" background.color="1073741824" )
+text(band=header alignment="2" text="输出次数" border="0" color="33554432" x="7022" y="4" height="76" width="338" html.valueishtml="0"  name=exportnum_t visible="1"  font.face="宋体" font.height="-9" font.weight="400"  font.family="0" font.pitch="2" font.charset="134" background.mode="2" background.color="1073741824" )
+text(band=header alignment="2" text="最后输出人" border="0" color="33554432" x="7369" y="4" height="76" width="425" html.valueishtml="0"  name=lastexporter_t visible="1"  font.face="宋体" font.height="-9" font.weight="400"  font.family="0" font.pitch="2" font.charset="134" background.mode="2" background.color="1073741824" )
+text(band=header alignment="2" text="最后输出时间" border="0" color="33554432" x="7803" y="4" height="76" width="343" html.valueishtml="0"  name=lastexportdate_t visible="1"  font.face="宋体" font.height="-9" font.weight="400"  font.family="0" font.pitch="2" font.charset="134" background.mode="2" background.color="1073741824" )
+text(band=header alignment="2" text="审核人" border="0" color="33554432" x="8155" y="4" height="76" width="247" html.valueishtml="0"  name=auditor_t visible="1"  font.face="宋体" font.height="-9" font.weight="400"  font.family="0" font.pitch="2" font.charset="134" background.mode="2" background.color="1073741824" )
+text(band=header alignment="2" text="审核时间" border="0" color="33554432" x="8411" y="4" height="76" width="343" html.valueishtml="0"  name=auditdate_t visible="1"  font.face="宋体" font.height="-9" font.weight="400"  font.family="0" font.pitch="2" font.charset="134" background.mode="2" background.color="1073741824" )
+text(band=header alignment="2" text="备注" border="0" color="33554432" x="8763" y="4" height="76" width="375" html.valueishtml="0"  name=memo_t visible="1"  font.face="宋体" font.height="-9" font.weight="400"  font.family="0" font.pitch="2" font.charset="134" background.mode="2" background.color="1073741824" )
+text(band=header alignment="2" text="财务内部凭证号" border="0" color="33554432" x="9147" y="4" height="76" width="631" html.valueishtml="0"  name=cwaccountno_t visible="1"  font.face="宋体" font.height="-9" font.weight="400"  font.family="0" font.pitch="2" font.charset="134" background.mode="2" background.color="1073741824" )
+text(band=header alignment="2" text="批次号" border="0" color="33554432" x="9787" y="4" height="76" width="366" html.valueishtml="0"  name=batch_t visible="1"  font.face="宋体" font.height="-9" font.weight="400"  font.family="0" font.pitch="2" font.charset="134" background.mode="2" background.color="1073741824" )
+text(band=header alignment="2" text="生成凭证指令代码" border="0" color="33554432" x="10162" y="4" height="76" width="699" html.valueishtml="0"  name=gencmdseq_t visible="1"  font.face="宋体" font.height="-9" font.weight="400"  font.family="0" font.pitch="2" font.charset="134" background.mode="2" background.color="1073741824" )
+text(band=header alignment="2" text="门店" border="0" color="33554432" x="10871" y="4" height="76" width="617" html.valueishtml="0"  name=shopid_t visible="1"  font.face="宋体" font.height="-9" font.weight="400"  font.family="0" font.pitch="2" font.charset="134" background.mode="2" background.color="1073741824" )
+text(band=header alignment="2" text="核算年" border="0" color="33554432" x="11497" y="4" height="76" width="334" html.valueishtml="0"  name=accyear_t visible="1"  font.face="宋体" font.height="-9" font.weight="400"  font.family="0" font.pitch="2" font.charset="134" background.mode="2" background.color="1073741824" )
+text(band=header alignment="2" text="核算月" border="0" color="33554432" x="11840" y="4" height="76" width="389" html.valueishtml="0"  name=accmonth_t visible="1"  font.face="宋体" font.height="-9" font.weight="400"  font.family="0" font.pitch="2" font.charset="134" background.mode="2" background.color="1073741824" )
+text(band=header alignment="2" text="核算制单日期" border="0" color="33554432" x="12238" y="4" height="76" width="521" html.valueishtml="0"  name=accdate_t visible="1"  font.face="宋体" font.height="-9" font.weight="400"  font.family="0" font.pitch="2" font.charset="134" background.mode="2" background.color="1073741824" )
+text(band=header alignment="2" text="上传NC制单人" border="0" color="33554432" x="12768" y="4" height="76" width="654" html.valueishtml="0"  name=inputer_nc_t visible="1"  font.face="宋体" font.height="-9" font.weight="400"  font.family="0" font.pitch="2" font.charset="134" background.mode="2" background.color="1073741824" )
+htmltable(border="1" )
+htmlgen(clientevents="1" clientvalidation="1" clientcomputedfields="1" clientformatting="0" clientscriptable="0" generatejavascript="1" encodeselflinkargs="1" netscapelayers="0" )
+export.xml(headgroups="1" includewhitespace="0" metadatatype=0 savemetadata=0 )
+import.xml()
+export.pdf(method=0 distill.custompostscript="0" xslfop.print="0" )
+ 

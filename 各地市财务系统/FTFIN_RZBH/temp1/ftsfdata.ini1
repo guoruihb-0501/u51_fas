@@ -1,0 +1,243 @@
+[d_cwjxc_hz_list]
+FilterString=
+[d_kcadjust_list1]
+SearchString=sdate^t=^t2020-04-01^tAND^t2^t2020-04-01^tdate^tSALECOST.SDATE^r^nshopid^t=^t[A00L]九州配送中心^t^t2^tA00L^tchar^tSALECOST.SHOPID
+[d_cwzzvoucher]
+SearchString=cwzzvoucher_seq^t<>^t1015^t^t0^t1015^tdeci^tCWZZVOUCHER.SEQ
+FilterString=cwzzvoucher_shopid^t=^t[051101] 福州永泰泰盛店(超市)^t^t2^t051101^tchar^tCWZZVOUCHER.SHOPID
+[d_bankaccount]
+SearchString=bankaccid^tIS NOT NULL^t^t^t0^t^tchar^tBANKACCOUNT.BANKACCID
+[d_suppay_sel_cx]
+SearchString=supid^t=^t7408^t^t2^t7408^tchar^tFIN_SUPPAY_IH.SUPID
+[d_xsadjust_list1]
+SearchString=finbillno^t=^t18120620057100000041-100094^t^t0^t18120620057100000041-100094^tchar^tCSALECOST.FINBILLNO
+FilterString=
+[d_wholesaleinn_list1]
+SearchString=billno^t=^t200401J022270005^t^t0^t200401J022270005^tchar^tWHOLESALEINNER.BILLNO
+FilterString=
+[d_jyfsadjust_list1]
+SearchString=auditdate^t<=^t2018-11-30^tAND^t2^t2018-11-30^tdate^tPURCOSTADJ.AUDITDATE^r^nasid^t=^t[H010102] 日照日百商业有限公司万德福莒县店^tAND^t2^tH010102^tchar^tPURCOSTADJ.ASID^r^nshopid^t=^t[2003]万德福莒县店百货^t^t2^t2003^tchar^tPURCOSTADJ.SHOPID
+FilterString=netadjamt^t=^t0^tAND^t0^t0^tnumb^tNETADJAMT^r^nadjamt^t=^t0^t^t0^t0^tnumb^tADJAMT
+[d_INT_SupCharge_list1]
+SearchString=supid^t=^t[100304] 山东潍坊百货集团股份有限公司青岛分公司2^t^t2^t100304^tchar^tINT_SUPCHARGE.SUPID
+FilterString=billtype^t=^t[I01]供应商返利单^t^t1^tI01^tchar^tINT_SUPCHARGE.BILLTYPE
+[d_suppay_sel_pay]
+SearchString=supid^t=^t7408^t^t2^t7408^tchar^tFIN_SUPPAY_IH.SUPID
+[d_supsettle_generate_hq]
+SearchString=gys^t=^t100000^t^t2^t100000^tchar^tGYS
+[d_supinvoice_list_cx]
+SearchString=billno^t=^t181025I16000019^t^t0^t181025I16000019^tchar^tFIN_SUPINVOICE.BILLNO
+[d_supsettle_sel_1_cx]
+SearchString=supid^t=^t[900000] D00L内部供应商^t^t2^t900000^tchar^tFIN_SUPSETTLE_IH.SUPID
+[d_supsettle_sel_3_cx]
+SearchString=billno^t=^t181120I06000046^t^t0^t181120I06000046^tchar^tFIN_SUPSETTLE_IH.BILLNO
+[d_chargeitem_list]
+SearchString=syschargeid^tIS NOT NULL^t^t^t0^t^tchar^tFIN_CHARGE.SYSCHARGEID
+FilterString=typeid^t=^t固定值金额^t^t2^t10^tchar^tFIN_CHARGE.TYPEID
+[d_opercharge_list]
+SearchString=
+[d_supchargeing_list]
+SearchString=billno^t<>^t181205I50000038^t^t0^t181205I50000038^tchar^tFIN_SUPCHARGE_IH.BILLNO
+[d_supcharge_list_ls]
+SearchString=billno^t=^t181129I02002493^t^t0^t181129I02002493^tchar^tFIN_SUPCHARGE_IH.BILLNO
+[d_inallot_list1]
+SearchString=outexedate^t>=^t2020-04-10^t^t2^t2020-04-10^tdate^tRATION.OUTEXEDATE
+[d_opersearchgroup_list]
+SearchString=osggrpid^t<>^t0^t^t0^t0^tchar^tADM_OPERSEACHGROUP.OSGGRPID
+[d_gfcinstr_list2]
+SearchString=asid^t=^t[HC002] 万福来-四平店^tAND^t2^tHC002^tchar^tRECEIPT.ASID^r^nauditdate^t<=^t2020-06-01^t^t2^t2020-06-01^tdate^tRECEIPT.AUDITDATE
+FilterString=tradetype^t=^t内部交易^t^t1^t1^tchar^tRECEIPT.TRADETYPE
+[d_alzmfcoutstr_list12]
+SearchString=auditdate^t<>^t2018-11-01^t^t2^t2018-11-01^tdate^tRET.AUDITDATE
+[d_salecostgroup_list1]
+SearchString=wmid^t<>^t经销^tAND^t2^t1^tchar^tSALECOSTGROUP.WMID^r^nwmid^t<>^t成本代销^t^t2^t2^tchar^tSALECOSTGROUP.WMID
+[d_chargecheck_mul]
+SearchString=flag^tIS NOT NULL^t^t^t1^t^tchar^tFLAG
+FilterString=
+[d_supadvance_list_pay]
+SearchString=supid^tIS NOT NULL^t^t^t2^t^tchar^tFIN_SUPADVANCE.SUPID
+[d_supsettle_sel_3_sh]
+SearchString=flag^tIS NOT NULL^t^t^t2^t^tchar^tFIN_SUPSETTLE_IH.FLAG
+FilterString=supid^t=^t[100252] 石家庄冬阁商贸有限公司^t^t2^t100252^tchar^tFIN_SUPSETTLE_IH.SUPID
+[d_chargecheck_cash]
+SearchString=supid^t<>^t4786^t^t2^t4786^tchar^tFIN_SUPCHARGELIST.SUPID
+[d_ratifysheet_list]
+SearchString=venderid^t=^t7408^t^t0^t7408^tchar^tVENDERID
+[d_operaccnt_grid]
+SearchString=
+[d_supsettle_sel_2_cx]
+SearchString=billno^tIS NOT NULL^t^t^t0^t^tchar^tFIN_SUPSETTLE_IH.BILLNO
+[d_supinvoice_kp_list]
+SearchString=supid^t=^t7703^t^t2^t7703^tchar^tFIN_SUPINVOICE.SUPID
+[d_supinvoice_list]
+SearchString=supid^t=^t900000^tAND^t2^t900000^tchar^tFIN_SUPINVOICE.SUPID^r^nfin_supinvoice_settleno^t=^t200628I04000730^t^t0^t200628I04000730^tchar^tFIN_SUPINVOICE.SETTLENO
+[d_supinvoice_list_sh]
+SearchString=supid^t=^t900000^tAND^t2^t900000^tchar^tFIN_SUPINVOICE.SUPID^r^nfin_supinvoice_settleno^t=^t200628I04000730^t^t0^t200628I04000730^tchar^tFIN_SUPINVOICE.SETTLENO
+[d_gfcmove_list1]
+SearchString=billno^t=^t200407J022360002^t^t0^t200407J022360002^tchar^tTRAN.BILLNO
+FilterString=
+[d_supsettle_sel_1_sh]
+SearchString=billno^t=^t200628I04000693^t^t0^t200628I04000693^tchar^tFIN_SUPSETTLE_IH.BILLNO
+[d_supinvoice_kp_list_cx]
+SearchString=supid^t=^t200157^t^t2^t200157^tchar^tFIN_SUPINVOICE.SUPID
+[d_supsettle_sel_5_sh]
+SearchString=supid^t=^t20115^t^t2^t20115^tchar^tFIN_SUPSETTLE_IH.SUPID
+[d_int_minsale0_list1]
+SearchString=supid^t<>^t[200039] 刘春燕^t^t2^t200039^tchar^tINT_MINSALE.SUPID
+[d_operlog]
+SearchString=logkey^t<>^t2^t^t0^t2^tchar^tADM_OPERLOG.LOGKEY
+[d_supsettlelist_ye_d]
+FilterString=btype^t=^t毛利补差单^t^t2^t603^tchar^tFIN_BILLCHECK.BTYPE
+[d_supchargeing_list_cx]
+SearchString=billno^tIS NOT NULL^t^t^t0^t^tchar^tFIN_SUPCHARGE_IH.BILLNO
+[d_cwzzvoucheroutcmd]
+SearchString=seq^t<>^t3628^t^t0^t3628^tnumb^tCWZZVOUCHEROUTCMD.SEQ
+[d_ratifyshee_batch]
+SearchString=ratifysheetitem_billno^t<>^t1^t^t0^t1^tchar^tRATIFYSHEETITEM.BILLNO
+FilterString=ratifysheetitem_billno^t=^t1^t^t0^t1^tchar^tRATIFYSHEETITEM.BILLNO
+[d_supcharge_list_cx]
+SearchString=inputor^t=^t[000260] 秦子涵^tAND^t2^t90000703^tchar^tFIN_SUPCHARGE_IH.INPUTOR^r^nhandno^t=^t5^t^t0^t5^tchar^tFIN_SUPCHARGE_IH.HANDNO
+[d_selfsettle_list_cx]
+SearchString=billno^tIS NOT NULL^t^t^t0^t^tchar^tFIN_SELFSETTLE_IH.BILLNO
+[d_selfsettle_list]
+SearchString=billno^tIS NOT NULL^t^t^t0^t^tchar^tFIN_SELFSETTLE_IH.BILLNO
+[d_supinvoice_kp_list_sh]
+SearchString=billno^tIS NOT NULL^t^t^t0^t^tchar^tFIN_SUPINVOICE.BILLNO
+[d_psadjust_list1]
+SearchString=billno^tIS NOT NULL^t^t^t0^t^tchar^tPURCOSTADJ.BILLNO
+[d_settleunpaidlist_gen]
+SearchString=venderid^t<>^t[123] 全品类测试^t^t2^t123^tchar^tSETTLEUNPAIDLIST.VENDERID
+[d_supchargeing_list_kp]
+SearchString=billno^t=^t140900I50000014^t^t0^t140900I50000014^tchar^tFIN_SUPCHARGE_IH.BILLNO
+[d_supadvance_list_cx]
+SearchString=supid^t=^t[100802] 张业平^t^t2^t100802^tchar^tFIN_SUPADVANCE.SUPID
+[d_grppppop_list1]
+SearchString=billno^t=^t140810577100005^t^t0^t140810577100005^tchar^tXTRAN.BILLNO
+[d_mktcatpop_list1]
+SearchString=billno^tIS NOT NULL^t^t^t0^t^tchar^tMATERIALSUSE.BILLNO
+[d_byapl_list1]
+SearchString=inexedate^t>=^t2014-09-01^tAND^t2^t2014-09-01^tdate^tSTOCKTAKE.INEXEDATE^r^ninexedate^t<=^t2014-09-30^tAND^t2^t2014-09-30^tdate^tSTOCKTAKE.INEXEDATE^r^nshopid^t=^t[0010]泰兴城中店^tAND^t2^t0010^tchar^tSTOCKTAKE.SHOPID^r^nstid^t=^t生鲜盘点^t^t1^t1^tchar^tSTOCKTAKE.STID
+[d_jhadjust_list1]
+SearchString=auditdate^t<=^t2020-06-02^tAND^t2^t2020-06-02^tdate^tSTKCOSTADJ.AUDITDATE^r^nasid^t=^t[HC002] 万福来-四平店^t^t2^tHC002^tchar^tSTKCOSTADJ.ASID
+FilterString=
+[d_supchargelist_detail_sq_d]
+FilterString=
+[d_cwjxc_mx_list]
+FilterString=shopid^tRLIKE^t002^t^t2^t002^tchar^tPREPOOL_JXC.SHOPID
+[d_grpcatpop_list1]
+SearchString=inexedate^t>=^t2014-08-12^tAND^t2^t2014-08-12^tdate^tDEPTUSE.INEXEDATE^r^ninexedate^t<=^t2014-08-28^tAND^t2^t2014-08-28^tdate^tDEPTUSE.INEXEDATE^r^nshopid^t=^t[0005]江阴城中店^t^t2^t0005^tchar^tDEPTUSE.SHOPID
+[d_bsapl_list1]
+SearchString=inexedate^t=^t2018-10-07^t^t2^t2018-10-07^tdate^tLOST.INEXEDATE
+[d_settlesupbatch_chk_mul]
+FilterString=
+[d_jxc_gysjhcx_list]
+FilterString=
+[d_bill_define]
+SearchString=billname^tIS NOT NULL^t^t^t0^t^tchar^tADM_BILLSEARCH.BILLNAME
+[d_cxadjust_list1]
+SearchString=csalecostgroup_edate^t=^t2013-09-30^tAND^t2^t2013-09-30^tdate^tCSALECOSTGROUP.EDATE^r^ncsalecostgroup_asid^t=^t[H001] 新华都购物广场股份有限公司^t^t2^tH001^tchar^tCSALECOSTGROUP.ASID
+[d_cwjz_list]
+SearchString=cjhbillno^t>=^t0^t^t0^t0^tchar^tCWZZJZHEAD.CJHBILLNO
+[d_supchargeimport]
+SearchString=
+[d_gysyjgl_list]
+SearchString=sspdjbh^t=^t0013063^t^t0^t0013063^tchar^tSUPSETCASH.SSPDJBH
+[d_supcharge_list]
+SearchString=inputor^t=^t[000260] 秦子涵^t^t2^t90000703^tchar^tFIN_SUPCHARGE_IH.INPUTOR
+[d_supsettle_sel_5_cx]
+SearchString=billno^t<>^t1^t^t0^t1^tchar^tFIN_SUPSETTLE_IH.BILLNO
+[d_supsettle_sel_2_sh]
+SearchString=billno^tIS NOT NULL^t^t^t0^t^tchar^tFIN_SUPSETTLE_IH.BILLNO
+[d_supplier_cont_cnt_u51]
+SearchString=venderid^t=^t100126^t^t0^t100126^tchar^tVENDER.VENDERID
+[d_supplier_list]
+SearchString=venderid^t<>^t100055^t^t0^t100055^tchar^tVENDER.VENDERID
+[d_ratifysheet_list_cx]
+SearchString=venderid^t<>^t800015^t^t0^t800015^tchar^tVENDERID
+[d_mktgbpop_list1]
+SearchString=billno^t<>^t1^t^t0^t1^tchar^tCHANGECATEGORY.BILLNO
+[dw_usergrp_list]
+SearchString=usergrpid^t<>^t1^t^t0^t1^tchar^tADM_OPERUSERGROUP.USERGRPID
+[d_supsettle_id_hz]
+SearchString=supid^t=^t20142^t^t2^t20142^tchar^tFIN_SUPSETTLE_IH.SUPID
+[d_supchargelist_change]
+SearchString=scldate^t<>^t2018-12-03^t^t2^t2018-12-03^tdate^tFIN_SUPCHARGELIST.SCLDATE
+[d_set_bank]
+SearchString=bankid^t<>^t1^t^t0^t1^tchar^tBANK.BANKID
+[d_fr_jb_mast_list1]
+SearchString=sheetid^t<>^t1^t^t0^t1^tchar^tFR_JG_MAST.SHEETID
+[d_cxyyjgl_list]
+SearchString=sspmarket^t=^t[1001]北国超市^t^t2^t1001^tchar^tSUPSETCASH.SSPMARKET
+[d_sycode3]
+SearchString=
+[d_supcharge_list_ct]
+SearchString=supid^t=^t[105781] 石家庄市金驰贸易有限公司^t^t2^t105781^tchar^tFIN_SUPCHARGE_IH.SUPID
+[d_supsettle_generate_hq_all]
+SearchString=gys^t=^t20214^t^t2^t20214^tchar^tV_GENERATE_SUPSETTLE.GYS
+[d_contmain_search]
+SearchString=supid^tIS NOT NULL^t^t^t2^t^tchar^tV_CONTMAIN.SUPID
+[d_finfeetype]
+SearchString=
+[d_sycode1]
+SearchString=
+[d_sycode4]
+SearchString=code^t=^t05020785^t^t0^t05020785^tchar^tCWZZ_SYCODE.CODE
+[d_cont_list_cnt_u51]
+SearchString=contno^t=^tYZB101806009^t^t0^tYZB101806009^tchar^tCNT_CONTMAIN.CONTNO
+[d_sgyjgl_list]
+SearchString=sspdjbh^t<>^t0057058^t^t0^t0057058^tchar^tSUPSETCASH.SSPDJBH
+[d_sycode2]
+SearchString=
+[d_chargecheck_cash_rpt]
+SearchString=inputor^t=^t[800201] 马茹^t^t2^t800201^tchar^tFIN_SUPCHARGE_IH.INPUTOR
+FilterString=inputor^t=^t[800201] 马茹^t^t2^t800201^tchar^tFIN_SUPCHARGE_IH.INPUTOR
+[d_cont_list_cnt2_u51]
+SearchString=contno^t=^tC2383210095^t^t0^tC2383210095^tchar^tV_CNT_CONTMAIN_SHOP.CONTNO
+[d_supcharge_list_xg]
+SearchString=billno^tIS NOT NULL^t^t^t0^t^tchar^tFIN_SUPCHARGE_IH.BILLNO
+[d_supset_d]
+FilterString=sspbillno^t=^t13071015200207^t^t0^t13071015200207^tchar^tSUPSETCASH.SSPBILLNO
+[d_supadvance_list]
+SearchString=billno^t<>^t0^t^t0^t0^tchar^tFIN_SUPADVANCE.BILLNO
+[d_xscb_supmkthz_cat_d]
+FilterString=
+[d_supchargelist_detail_sq_d_PRINT]
+FilterString=supid^t=^t[1001531] 石家庄蔡氏食品有限公司^t^t2^t1001531^tchar^tFIN_SUPCHARGELIST.SUPID
+[b_fr_jb_mast_list1]
+SearchString=sheetid^t<>^t1^t^t0^t1^tchar^tFR_JG_MAST.SHEETID
+[d_supadvance_ret_list]
+SearchString=billno^tIS NOT NULL^t^t^t0^t^tchar^tFIN_SUPADVANCE.BILLNO
+[d_setsettle_err]
+SearchString=what^t<>^t1^t^t0^t1^tchar^tFIN_SUPNOSETTLEREASON.WHAT
+[d_jzhz_list]
+FilterString=cjhsymkt^t=^t[1030]翟营超市^tOR^t2^t1030^tchar^tCWZZJZHEAD.CJHSYMKT^r^ncjdpaycode^t=^t509-F券^t^t2^t509^tchar^tCWZZJZDETAIL.CJDPAYCODE
+[d_jzmx_list]
+FilterString=cjhsymkt^t<>^t[1029]邢台超市^tAND^t2^t1029^tchar^tCWZZJZHEAD.CJHSYMKT^r^ncjdpaycode^t=^t201^t^t0^t201^tchar^tCWZZJZDETAIL.CJDPAYCODE
+[d_supsettle_id_plhz]
+SearchString=venderid^t=^t122389^t^t2^t122389^tchar^tVENDER.VENDERID
+[d_rptprint_list]
+SearchString=repname^tLIKE^t进货^t^t0^t进货^tchar^tADM_RPTPRINT.REPNAME
+[d_zqjstsgx]
+SearchString=hang^tIS NOT NULL^t^t^t0^t^tnumb^tFIN_ZQJSTSGX.HANG
+[d_supadvance_list_sh]
+SearchString=billno^tIS NOT NULL^t^t^t0^t^tchar^tFIN_SUPADVANCE.BILLNO
+[d_supadvance_ret_list_pay]
+SearchString=billno^tIS NOT NULL^t^t^t0^t^tchar^tFIN_SUPADVANCE.BILLNO
+[d_wdz_d]
+FilterString=
+[d_supcharge_newshop_list_ls]
+SearchString=billno^t=^t140900I77000002^t^t0^t140900I77000002^tchar^tFIN_SUPCHARGE_NEWSHOP_IH.BILLNO
+[d_bankbranch]
+SearchString=
+[d_supsettle_generate]
+SearchString=supid^t=^t1113^t^t2^t1113^tchar^tV_SUPSETTLE_GENERATE.SUPID
+[d_shopexp]
+SearchString=shopid^t<>^t[1001] 日照日百商业有限公司超市^t^t2^t1001^tchar^tSHOPEXP.SHOPID
+[d_accbill_amt1]
+SearchString=billno^t<>^t1^t^t0^t1^tchar^tMATCHACCOUNTRULECMD_BAK.BILLNO
+[d_rpt_cdk_sycy]
+FilterString=syyh^t=^t010005^t^t0^t010005^tchar^tSYYH
+[d_settle_goods_new_d]
+FilterString=
+[d_goodspd_mx_d]
+FilterString=catid^t=^t[41]蔬果^t^t2^t41^tchar^tCATID
